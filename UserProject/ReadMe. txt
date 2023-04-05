@@ -1,0 +1,19 @@
+To use
+Entity Framework :
+Install EF:
+
+dotnet new tool-manifest
+
+dotnet tool install --local dotnet-ef --version 5.0.6
+Then use dotnet dotnet-ef instead of dotnet-ef.
+
+dotnet dotnet-ef
+
+dotnet dotnet-ef migrations add "InitialSetup"
+--command to setup initial creating of tables mentioned iin DBContext
+
+dotnet dotnet-ef database update
+--command to update the database
+
+dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 5.0
+for NUNIT
