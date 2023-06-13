@@ -1,0 +1,37 @@
+@model IEnumerable<dotnetapp.Models.BloodDonor>
+
+<h1>Users</h1>
+
+<p>
+    <a asp-action="Create">New Donor Registration</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Blood Group</th>
+            <th>Gender</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.DOB</td>
+                <td>@user.BloodGroup</td>
+                <td>@user.Gender</td>
+                <td>@user.Location</td>
+                <td>@user.MobileNumber</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
